@@ -79,7 +79,11 @@ function quit(){
   console.log('Quitting now, goodbye!')
   process.exit();
 }
-
+/**
+ * prints all possible commands a user can use 
+ *
+ * @returns {void}
+ */
 function help() {
   console.log("All Commands: \n hello>>prints hello!\n help>>prints all possible commands\n exit>> quite the appliction\n quit >>same as exit quit the application ");
 }
