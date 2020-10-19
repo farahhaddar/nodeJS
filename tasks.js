@@ -38,13 +38,13 @@ function onDataReceived(text) {
   x=text.replace('\n'," ")
   x=x.trim();
   x=x.split(" ");
-  if (x[0] === 'quit\n' || x[0] === 'exit\n' ) {
+  if (x[0] === 'quit' || x[0] === 'exit' ) {
     quit();
   }
   else if(x[0] === 'hello'){
     hello(x[1]);
   }
-  else if(x[0] === 'help\n'){
+  else if(x[0] === 'help'){
     help();
   }else{
     unknownCommand(x[0]);
@@ -73,6 +73,7 @@ function hello(c){
   if(c!=null){
     console.log('hello'+" "+c+" "+'!')
   }else{
+  console.log('hello'+" "+c+" "+'!')
   console.log('hello!')}
 }
 
@@ -92,7 +93,7 @@ function quit(){
  * @returns {void}
  */
 function help() {
-  console.log("All Commands: \n hello>>prints hello!\n help>>prints all possible commands\n exit>> quite the appliction\n quit >>same as exit quit the application ");
+  console.log("All Commands: \n hello>>prints [hello!] if you enter only hello and prints [hello name !] if you enter hello plus your name name \n help>>prints all possible commands\n exit>> quite the appliction\n quit >>same as exit quit the application ");
 }
 
 
