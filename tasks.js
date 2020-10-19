@@ -50,6 +50,8 @@ function onDataReceived(text) {
       list();
    } else if(x[0] === 'add'){
         add(x[1])
+      }else if(x[0] === 'remove'){
+          remove(x[1])
   }else{
     unknownCommand(x[0]);
   }
@@ -71,13 +73,20 @@ let tasks=['feed the cat','watch a movie','do nodejs task'];
 
 function list(){
   for( var i=0; i<tasks.length; i++){
-  console.log(i +"-"+ tasks[i]);
+  console.log(i+1 +"-"+ tasks[i]);
   }
 }
 function add(x){
   tasks.push(x);
 }
 
+function remove(x){
+  if(x==null){
+    tasks.pop();
+  }else{
+    tasks.splice(x,x);
+  }
+}
 
 
 
