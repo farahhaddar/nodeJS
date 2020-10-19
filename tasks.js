@@ -48,6 +48,8 @@ function onDataReceived(text) {
       help()
   }else if(x[0] === 'list'){
       list();
+   } else if(x[0] === 'add'){
+        add(x[1])
   }else{
     unknownCommand(x[0]);
   }
@@ -65,8 +67,9 @@ function unknownCommand(c){
   console.log('unknown command: "'+c.trim()+'"')
 }
 
+let tasks=['feed the cat','watch a movie','do nodejs task'];
+
 function list(){
-  tasks=['feed the cat','watch a movie','do nodejs task'];
   for( var i=0; i<tasks.length; i++){
   console.log(i +"-"+ tasks[i]);
   }
