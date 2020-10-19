@@ -83,6 +83,9 @@ function add(x){
 function remove(x){
   if(x==null){
     tasks.pop();
+  }
+  else if(x>tasks.length) {
+    console.log('number is not found in the list ');
   }else{
     tasks.splice(x,x);
   }
