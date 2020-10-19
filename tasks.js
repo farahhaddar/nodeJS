@@ -74,7 +74,9 @@ function list(){
   console.log(i +"-"+ tasks[i]);
   }
 }
-
+function add(x){
+  tasks.push(x);
+}
 
 
 
