@@ -70,7 +70,10 @@ function unknownCommand(c){
  * @returns {void}
  */
 function hello(c){
-  console.log('hello'+" "+c+" "+'!')
+  if(c!=null){
+    console.log('hello'+" "+c+" "+'!')
+  }else{
+  console.log('hello!')}
 }
 
 
