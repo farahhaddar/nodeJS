@@ -124,7 +124,7 @@ function quit(){
  * @returns {void}
  */
 function help() {
-  console.log("All Commands: \n hello>>prints [hello!] if you enter only hello and prints [hello name !] if you enter hello plus your name name \n help>>prints all possible commands\n exit>> quite the appliction\n quit >>same as exit quit the application ");
+  console.log("All Commands: \n * hello>>prints [hello!] if you enter only hello and prints [hello name !] if you enter hello plus your name name \n * help>>prints all possible commands\n * exit>> quite the appliction\n * quit >>same as exit quit the application\n * list >> it shows the to do list \n * add >> allows you to add tasks to the to do list \n * remove >> allow you to remove items from the list :\n -if you enter [remove] it remove the last item from the list\n - if you enter [remove nb] it remove the nb you entered from the list");
 }
 
 
