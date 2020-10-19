@@ -35,7 +35,7 @@ function startApp(name){
  */
 function onDataReceived(text) {
   console.log(text)
-  x=text.replace('\n'," ")
+  x=text.replace('\n'," ");
   x=x.trim();
   x=x.split(" ");
   if (x[0] === 'quit' || x[0] === 'exit' ) {
@@ -45,7 +45,9 @@ function onDataReceived(text) {
     hello(x[1]);
   }
   else if(x[0] === 'help'){
-    help();
+      help()
+  }else if(x[0] === 'list'){
+      list();
   }else{
     unknownCommand(x[0]);
   }
@@ -62,6 +64,21 @@ function onDataReceived(text) {
 function unknownCommand(c){
   console.log('unknown command: "'+c.trim()+'"')
 }
+
+function list(){
+  tasks=['feed the cat','watch a movie','do nodejs task'];
+  for( var i=0; i<tasks.length; i++){
+  console.log(i +"-"+ tasks[i]);
+  }
+}
+
+
+
+
+
+
+
+
 
 
 /**
@@ -95,6 +112,15 @@ function quit(){
 function help() {
   console.log("All Commands: \n hello>>prints [hello!] if you enter only hello and prints [hello name !] if you enter hello plus your name name \n help>>prints all possible commands\n exit>> quite the appliction\n quit >>same as exit quit the application ");
 }
+
+
+
+
+
+
+
+
+
 
 
 // The following line starts the application
