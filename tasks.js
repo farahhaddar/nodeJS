@@ -34,7 +34,7 @@ function startApp(name){
  * @returns {void}
  */
 function onDataReceived(text) {
-  console.log(text)
+  
   x=text.replace('\n'," ");
   x=x.trim();
   x=x.split(" ");
@@ -48,10 +48,13 @@ function onDataReceived(text) {
       help()
   }else if(x[0] === 'list'){
       list();
-   } else if(x[0] === 'add'){
+  } else if(x[0] === 'add'){
         add(x[1])
-      }else if(x[0] === 'remove'){
+  }else if(x[0] === 'remove'){
           remove(x[1])
+        }else if(x[0] === 'edit'){
+          edit(x)
+       
   }else{
     unknownCommand(x[0]);
   }
@@ -90,6 +93,34 @@ function remove(x){
     tasks.splice(x,x);
   }
 }
+
+
+
+
+  
+function edit(x){
+ /* console.log(x);
+  let blah=x.slice(1)
+  console.log(blah);
+  console.log( isNaN(parseInt(blah)));
+  let v=tasks[tasks.length-1];
+  console.log(v);
+  let y=isNaN(blah);
+  if(y==true){
+  console.log(y);}*/
+  
+  let blah=x.slice(1)
+  if(x[1]==null){
+    console.log('erorr enter the task you want to  edit')
+  }else if(isNaN(parseInt(blah))==true ){
+    tasks.push(x.slice(1).join(" "));
+    console.log(tasks);
+  }else if(isNaN(blah)==true){
+    let w=parseInt(blah);
+    tasks.splice(w,1,x.slice(2).join("  "));
+    console.log(tasks);
+  }}
+
 
 
 
