@@ -76,7 +76,7 @@ let tasks=['feed the cat','watch a movie','do nodejs task'];
 
 function list(){
   for( var i=0; i<tasks.length; i++){
-  console.log(i+1 +"-"+ tasks[i]);
+  console.log(i +"-"+ tasks[i]);
   }
 }
 function add(x){
@@ -87,10 +87,10 @@ function remove(x){
   if(x==null){
     tasks.pop();
   }
-  else if(x>tasks.length) {
+  else if(parseInt(x)>tasks.length-1) {
     console.log('number is not found in the list ');
   }else{
-    tasks.splice(x,x);
+    tasks.splice(parseInt(x),1);
   }
 }
 
